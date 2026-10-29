@@ -1,0 +1,544 @@
+/* ========================================
+   RESUME BUILDER PAGE
+======================================== */
+
+.builder-page {
+  min-height: calc(100vh - 82px);
+  padding-bottom: 80px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ========================================
+   BUILDER HEADER
+======================================== */
+
+.builder-header {
+  padding: 55px 20px 35px;
+  text-align: center;
+}
+
+.builder-header h1 {
+  margin-bottom: 12px;
+  color: #0f172a;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.builder-header p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   MAIN BUILDER LAYOUT
+======================================== */
+
+.builder-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 30px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 5%;
+}
+
+/* ========================================
+   FORM AND PREVIEW CARDS
+======================================== */
+
+.resume-form,
+.resume-preview-container {
+  min-width: 0;
+  padding: 35px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 5px 25px rgba(15, 23, 42, 0.04);
+}
+
+/* ========================================
+   FORM SECTION HEADINGS
+======================================== */
+
+.resume-form h2 {
+  margin-top: 38px;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.resume-form h2:first-child {
+  margin-top: 0;
+}
+
+/* ========================================
+   FORM LABELS
+======================================== */
+
+.resume-form label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ========================================
+   INPUTS AND TEXTAREAS
+======================================== */
+
+.resume-form input,
+.resume-form textarea,
+.resume-form select {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.resume-form input:hover,
+.resume-form textarea:hover,
+.resume-form select:hover {
+  border-color: #94a3b8;
+}
+
+.resume-form input:focus,
+.resume-form textarea:focus,
+.resume-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.resume-form input::placeholder,
+.resume-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.resume-form textarea {
+  min-height: 115px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+/* ========================================
+   REPEATED FORM ENTRY CARDS
+======================================== */
+
+.education-card,
+.experience-card,
+.project-card {
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #f8fafc;
+}
+
+.education-card h3,
+.experience-card h3,
+.project-card h3 {
+  margin-bottom: 15px;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* ========================================
+   FORM BUTTONS
+======================================== */
+
+.resume-form button {
+  padding: 12px 20px;
+  border: 1px solid #bfdbfe;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.resume-form button:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.resume-form button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* ========================================
+   PREVIEW CONTAINER
+======================================== */
+
+.resume-preview-container {
+  background: #ffffff;
+}
+
+.resume-preview-container > h2 {
+  margin-bottom: 25px;
+  color: #0f172a;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+/* ========================================
+   CORPORATE RESUME PAPER
+======================================== */
+
+.corporate-resume {
+  width: 100%;
+  max-width: 794px;
+  min-height: 1123px;
+  margin: 0 auto;
+  padding: 48px 52px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+}
+
+/* ========================================
+   CORPORATE RESUME HEADER
+======================================== */
+
+.corporate-header {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #111827;
+  text-align: center;
+}
+
+.corporate-header h1 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.corporate-header h3 {
+  margin: 0 0 13px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.corporate-contact,
+.corporate-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 7px;
+  color: #374151;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   CORPORATE RESUME SECTIONS
+======================================== */
+
+.corporate-section {
+  margin-top: 22px;
+}
+
+.corporate-section h2 {
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #9ca3af;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.corporate-section p {
+  margin: 4px 0;
+  color: #1f2937;
+  font-size: 11.5px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+/* ========================================
+   EXPERIENCE, EDUCATION, PROJECTS
+======================================== */
+
+.experience-preview,
+.education-preview,
+.project-preview {
+  margin-bottom: 17px;
+  break-inside: avoid;
+}
+
+.experience-heading,
+.education-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.experience-heading strong,
+.education-heading strong {
+  color: #111827;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.experience-heading span,
+.education-heading span {
+  color: #475569;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.company-name,
+.institution-name {
+  margin-top: 4px;
+  color: #1f2937;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+/* ========================================
+   PROJECTS PREVIEW
+======================================== */
+
+.project-preview h3 {
+  margin-bottom: 5px;
+  color: #111827;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.project-technologies {
+  color: #475569;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.project-link {
+  color: #374151;
+  font-size: 10.5px;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   RESUME BULLET POINTS
+======================================== */
+
+.resume-bullets {
+  margin: 6px 0;
+  padding-left: 17px;
+  list-style-type: disc;
+}
+
+.resume-bullets li {
+  margin-bottom: 4px;
+  color: #1f2937;
+  font-size: 11.5px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* ========================================
+   RESUME DOWNLOAD BUTTON
+======================================== */
+
+.download-pdf-btn {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: 17px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.download-pdf-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.18);
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+  .builder-container {
+    gap: 20px;
+    padding: 20px 3%;
+  }
+
+  .resume-form,
+  .resume-preview-container {
+    padding: 25px;
+  }
+
+  .corporate-resume {
+    padding: 35px 28px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .builder-container {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: auto;
+    padding: 15px 5%;
+  }
+
+  .builder-header {
+    padding: 40px 20px 20px;
+  }
+
+  .builder-header h1 {
+    font-size: 30px;
+  }
+
+  .resume-form,
+  .resume-preview-container {
+    padding: 25px;
+  }
+
+  .corporate-resume {
+    padding: 35px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .builder-page {
+    padding-bottom: 50px;
+  }
+
+  .builder-container {
+    padding: 10px 12px;
+  }
+
+  .resume-form,
+  .resume-preview-container {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .resume-form h2 {
+    font-size: 18px;
+  }
+
+  .education-card,
+  .experience-card,
+  .project-card {
+    padding: 15px;
+  }
+
+  .corporate-resume {
+    min-height: auto;
+    padding: 25px 18px;
+  }
+
+  .corporate-header h1 {
+    font-size: 22px;
+  }
+
+  .corporate-header h3 {
+    font-size: 12px;
+  }
+
+  .experience-heading,
+  .education-heading {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .experience-heading span,
+  .education-heading span {
+    white-space: normal;
+  }
+
+  .download-pdf-btn {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+/* ========================================
+   RESUME AUTO-SAVE STATUS
+======================================== */
+
+.resume-save-status {
+  margin-top: 15px;
+  padding: 12px 15px;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.resume-save-status.saved {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.resume-save-status.saving {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.resume-save-status.error {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #be123c;
+}

@@ -1,0 +1,512 @@
+/* ========================================
+   DASHBOARD MAIN LAYOUT
+======================================== */
+
+.dashboard {
+  min-height: calc(100vh - 82px);
+  padding: 65px 7% 100px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ========================================
+   DASHBOARD HEADER
+======================================== */
+
+.dashboard-header {
+  max-width: 1400px;
+  margin: 0 auto 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.dashboard-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-header h1 {
+  margin-bottom: 12px;
+  color: #0f172a;
+  font-size: clamp(30px, 3.5vw, 44px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.dashboard-header p {
+  max-width: 650px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.dashboard-header-btn {
+  flex-shrink: 0;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.14);
+}
+
+.dashboard-header-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+/* ========================================
+   RESUME CARDS GRID
+======================================== */
+
+.resume-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   INDIVIDUAL RESUME CARD
+======================================== */
+
+.saved-resume-card {
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 25px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.saved-resume-card:hover {
+  transform: translateY(-5px);
+  border-color: #bfdbfe;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.09);
+}
+
+.saved-resume-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 31px;
+}
+
+.saved-resume-card h2 {
+  margin-bottom: 10px;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.saved-resume-name {
+  margin-bottom: 8px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.saved-resume-date {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* ========================================
+   RESUME COMPLETION PROGRESS
+======================================== */
+
+.saved-resume-progress {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.saved-resume-progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.saved-resume-progress-heading span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.saved-resume-progress-heading strong {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 50px;
+  background: #e2e8f0;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  transition: width 0.4s ease;
+}
+
+/* ========================================
+   RESUME ACTION BUTTONS
+======================================== */
+
+.saved-resume-actions {
+  margin-top: 27px;
+}
+
+.dashboard-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashboard-btn.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.dashboard-btn.primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+}
+
+.saved-resume-secondary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.saved-resume-secondary-actions button {
+  flex: 1;
+  min-width: 75px;
+  padding: 11px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.saved-resume-secondary-actions button:hover {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.saved-resume-secondary-actions .delete-action {
+  border-color: #fecaca;
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.saved-resume-secondary-actions .delete-action:hover {
+  border-color: #fda4af;
+  background: #ffe4e6;
+  color: #9f1239;
+}
+
+/* ========================================
+   EMPTY DASHBOARD STATE
+======================================== */
+
+.dashboard-empty {
+  max-width: 550px;
+  margin: 30px auto;
+  padding: 60px 35px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 8px 35px rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-empty-icon {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 45px;
+}
+
+.dashboard-empty h2 {
+  margin-bottom: 13px;
+  color: #0f172a;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.dashboard-empty p {
+  margin-bottom: 28px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+  .dashboard {
+    padding: 50px 5% 80px;
+  }
+
+  .resume-dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 35px 5% 65px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    margin-bottom: 30px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 30px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+  }
+
+  .dashboard-header-btn {
+    width: 100%;
+  }
+
+  .resume-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .saved-resume-card {
+    padding: 25px;
+  }
+
+  .dashboard-empty {
+    padding: 45px 25px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+  .dashboard {
+    padding: 25px 15px 55px;
+  }
+
+  .saved-resume-card {
+    padding: 22px;
+  }
+
+  .saved-resume-card h2 {
+    font-size: 19px;
+  }
+
+  .saved-resume-secondary-actions {
+    gap: 8px;
+  }
+
+  .saved-resume-secondary-actions button {
+    min-width: 65px;
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .dashboard-empty h2 {
+    font-size: 23px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .saved-resume-card,
+  .progress-fill,
+  .dashboard-btn,
+  .dashboard-header-btn {
+    transition: none;
+  }
+
+  .saved-resume-card:hover,
+  .dashboard-btn.primary:hover,
+  .dashboard-header-btn:hover {
+    transform: none;
+  }
+}
+/* ========================================
+   IMPORT / CREATE HEADER BUTTONS
+======================================== */
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dashboard-import-btn {
+  padding: 15px 22px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #334155;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashboard-import-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.dashboard-import-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .dashboard-header-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .dashboard-import-btn,
+  .dashboard-header-actions .dashboard-header-btn {
+    width: 100%;
+  }
+}
+/* ========================================
+   PROFESSIONAL ADD BUTTONS
+======================================== */
+
+.resume-form .add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 5px;
+  padding: 13px 22px;
+  border: 1px solid #bfdbfe;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.resume-form .add-btn:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   PROFESSIONAL REMOVE BUTTONS
+======================================== */
+
+.resume-form .remove-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 11px 18px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fff1f2;
+  color: #be123c;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.resume-form .remove-btn:hover {
+  background: #ffe4e6;
+  border-color: #fda4af;
+  color: #9f1239;
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   MOBILE BUTTONS
+======================================== */
+
+@media (max-width: 480px) {
+  .resume-form .add-btn,
+  .resume-form .remove-btn {
+    width: 100%;
+  }
+}
